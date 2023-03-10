@@ -218,6 +218,8 @@ module.exports = function(eleventyConfig) {
     // Shortcodes
     //------------------------------------------------------------------------------
 
+    eleventyConfig.addShortcode("isLatest", () => process.env.BRANCH === "latest");
+
     eleventyConfig.addNunjucksShortcode("link", function(url) {
 
         // eslint-disable-next-line no-invalid-this -- Eleventy API
